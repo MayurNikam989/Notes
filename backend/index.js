@@ -9,7 +9,6 @@ app.use(express.json());
 
 // app.use(cors()); // Allow all origins (dev mode)
 
-OR restrict to specific frontend
 app.use(
   cors({
     origin: "https://notes-frontend-fi3u.onrender.com", // Allow only React app
