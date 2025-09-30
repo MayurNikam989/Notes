@@ -12,7 +12,7 @@ app.use(express.json());
 OR restrict to specific frontend
 app.use(
   cors({
-    origin: "http://notes-frontend-fi3u.onrender.com/, // Allow only React app
+    origin: "https://notes-frontend-fi3u.onrender.com", // Allow only React app
     methods: "GET,POST,PUT,DELETE","OPTIONS"
     allowedHeaders: ["Content-Type", "authToken"],
     credentials: true,
