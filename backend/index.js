@@ -13,7 +13,7 @@ app.use(
   cors({
     origin: "https://notes-frontend-fi3u.onrender.com", // Allow only React app
     methods: "GET,POST,PUT,DELETE,OPTIONS",
-    allowedHeaders: ["Content-Type", "authToken"],
+    allowedHeaders: ["Content-Type", "authToken","Authorization"],
     credentials: true,
   })
 );
