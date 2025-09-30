@@ -7,16 +7,17 @@ const port = process.env.PORT || 5000;
 //middleware for using the request body
 app.use(express.json());
 
-app.use(cors()); // Allow all origins (dev mode)
+// app.use(cors()); // Allow all origins (dev mode)
 
-// OR restrict to specific frontend
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000", // Allow only React app
-//     methods: "GET,POST,PUT,DELETE",
-//     credentials: true,
-//   })
-// );
+OR restrict to specific frontend
+app.use(
+  cors({
+    origin: "http://notes-frontend-fi3u.onrender.com/, // Allow only React app
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: ["Content-Type", "authToken"],
+    credentials: true,
+  })
+);
 
 connectToMongo();
 //Available routes
